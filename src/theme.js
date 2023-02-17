@@ -3,7 +3,7 @@ import { createTheme } from "@mui/material/styles";
 
 // color design tokens
 
-const tokens = (mode) => ({
+export const tokens = (mode) => ({
   ...(mode === "dark"
     ? {
         grey: {
