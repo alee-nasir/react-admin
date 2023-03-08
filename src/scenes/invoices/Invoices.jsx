@@ -4,7 +4,7 @@ import { DataGrid } from "@mui/x-data-grid";
 import { tokens } from "../../theme";
 import { mockDataInvoices } from "../../data/mockData";
 
-import Header from "../../components/Header";
+import Header from "../global/Header";
 
 const Invoices = () => {
   const theme = useTheme();

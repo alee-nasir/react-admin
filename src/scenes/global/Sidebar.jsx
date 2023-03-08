@@ -90,7 +90,7 @@ const Sidebar = () => {
                   Ali Nasir
                 </Typography>
                 <Typography variant="h6" color={colors.greenAccent[400]}>
-                  Data Analyst
+                  Administrator
                 </Typography>
               </Box>
             </Box>
@@ -154,7 +154,7 @@ const Sidebar = () => {
               setSelected={setSelected}
             />
             <Item
-              title="FAQ Page"
+              title="FAQ's"
               to="/faq"
               icon={<HelpOutlineOutlinedIcon />}
               selected={selected}
