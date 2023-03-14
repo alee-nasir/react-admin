@@ -11,7 +11,6 @@ const BarChart = ({ isDashboard = false }) => {
     <ResponsiveBar
       data={data}
       theme={{
-        // added
         axis: {
           domain: {
             line: {
@@ -68,8 +67,9 @@ const BarChart = ({ isDashboard = false }) => {
       ]}
       borderColor={{
         from: "color",
-        modifiers: [["darker", "1.6"]],
+        modifiers: [["darker", "0.5"]],
       }}
+      borderWidth={1}
       axisTop={null}
       axisRight={null}
       axisBottom={{
@@ -88,12 +88,11 @@ const BarChart = ({ isDashboard = false }) => {
         legendPosition: "middle",
         legendOffset: -40,
       }}
-      enableLabel={false}
+      enableLabel={true}
       labelSkipWidth={12}
       labelSkipHeight={12}
       labelTextColor={{
-        from: "color",
-        modifiers: [["darker", 1.6]],
+        theme: "labels.text.fill",
       }}
       legends={[
         {
@@ -113,12 +112,14 @@ const BarChart = ({ isDashboard = false }) => {
             {
               on: "hover",
               style: {
+                itemBackground: "rgba(0, 0, 0, .03)",
                 itemOpacity: 1,
               },
             },
           ],
         },
       ]}
+      // isInteractive={true}
       role="application"
       barAriaLabel={function (e) {
         return e.id + ": " + e.formattedValue + " in country: " + e.indexValue;
